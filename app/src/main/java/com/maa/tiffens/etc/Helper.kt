@@ -195,6 +195,29 @@ open class Helper  {
             }
 
         }
+        fun getAddress(context: Context,latitude : Double,longitude : Double): List<Address>? {
+            val geocoder: Geocoder
+            var addresses: List<Address>? = null
+            geocoder = Geocoder(context, Locale.getDefault())
+
+            try {
+                addresses = geocoder.getFromLocation(latitude, longitude, 1)
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+            return addresses
+        }
+        val listFragmentsMainTab: ArrayList<String>
+            get() {
+                val list = ArrayList<String>()
+
+                list.add("FIRST_TAB")
+                list.add("SECOND_TAB")
+                list.add("THIRD_TAB")
+                list.add("FOURTH_TAB")
+
+                return list
+            }
 
     }
 

@@ -2,8 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="true"
-        android:drawable="@drawable/rounded_corner_btn_border_enabled"/>
+        android:drawable="@drawable/rounded_corner_btn"/>
     <item
         android:state_enabled="false"
-        android:drawable="@drawable/rounded_corner_btn_border_disabled" />
+        android:drawable="@drawable/rounded_corner_edittext" />
 </selector>

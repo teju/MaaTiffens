@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/soft_transparent_grey"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@color/White"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:layout_height="100dp">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins_bolditalic"
+                android:textColor="@color/Black"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:textAlignment="center"
+                android:text="Verification Code"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/Black"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:textAlignment="center"
+                android:text="Please enter the verification code sent to your mobile number"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <com.mukesh.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:textColor="@color/Black"
+                app:itemCount="6"
+                app:lineColor="@color/themeColor"
+                app:viewType="line"
+                />
+            <Button
+                android:layout_width="150dp"
+                android:layout_marginTop="25dp"
+                android:text="Verify"
+                android:id="@+id/btnVerify"
+                android:textAllCaps="true"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/White"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_corner_edittext"
+                android:layout_height="wrap_content">
+
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

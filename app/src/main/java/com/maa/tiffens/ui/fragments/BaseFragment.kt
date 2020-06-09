@@ -1,6 +1,7 @@
 package com.maa.tiffens.ui.fragments
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.graphics.Typeface
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.text.TextWatcher
 import android.text.style.StyleSpan
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.app.ActivityCompat
@@ -72,6 +74,33 @@ open class BaseFragment : GenericFragment() {
         activity?.let {
             this.userInfo = UserInfoManager.getInstance(it)
         }
+        permissions()
+    }
+    fun permissions() {
+        val permissionListener: PermissionListener = object : PermissionListener {
+            override fun onUserNotGrantedThePermission() {
+            }
+
+            override fun onCheckPermission(permission: String, isGranted: Boolean) {
+                if (isGranted) {
+                    onPermissionAlreadyGranted()
+                } else {
+                    onUserNotGrantedThePermission()
+                }
+            }
+
+            @SuppressLint("MissingPermission")
+            override fun onPermissionAlreadyGranted() {
+
+            }
+        }
+        val permissions = ArrayList<String>()
+        permissions.add(android.Manifest.permission.CAMERA)
+        permissions.add(android.Manifest.permission.ACCESS_COARSE_LOCATION)
+        permissions.add(android.Manifest.permission.ACCESS_FINE_LOCATION)
+        permissions.add(android.Manifest.permission.READ_EXTERNAL_STORAGE)
+        checkPermissions(permissions, permissionListener)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -91,12 +120,12 @@ open class BaseFragment : GenericFragment() {
 
     fun setBackButtonToolbarStyleOne(v: View) {
        try {
-//            val llBack = v.findViewById<RelativeLayout>(R.id.llBack)
-//
-//           llBack.setOnClickListener {
-//
-//               home().onBackPressed()
-//            }
+            val llBack = v.findViewById<ImageView>(R.id.llBack)
+
+           llBack.setOnClickListener {
+
+               home().proceedDoOnBackPressed()
+            }
         } catch (e: Exception) {
            Helper.logException(activity, e)
         }

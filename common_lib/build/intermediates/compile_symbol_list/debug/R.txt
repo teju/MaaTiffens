@@ -1513,8 +1513,8 @@ int drawable notification_template_icon_bg 0x0
 int drawable notification_template_icon_low_bg 0x0
 int drawable notification_tile_bg 0x0
 int drawable notify_panel_notification_icon_bg 0x0
-int drawable rounded_corner_btn_border_disabled 0x0
-int drawable rounded_corner_btn_border_enabled 0x0
+int drawable rounded_corner_btn 0x0
+int drawable rounded_corner_edittext 0x0
 int drawable scrollbar_handle_holo_dark 0x0
 int drawable scrollbar_handle_holo_light 0x0
 int drawable selectable_background 0x0

@@ -17,11 +17,13 @@ import com.maatiffens.gon.etc.callback.NotifyListener
 import com.maatiffens.libs.helpers.BaseHelper
 import com.maatiffens.libs.helpers.BaseUIHelper
 import com.maa.tiffens.etc.Helper
+import com.maa.tiffens.etc.Helper.Companion.hideSoftKeyboard
 import com.maa.tiffens.etc.UserInfoManager
 import com.maa.tiffens.ui.dialog.NotifyDialogFragment
 import com.maa.tiffens.ui.fragments.BaseFragment
 import com.maa.tiffens.ui.fragments.HomeFragment
-import com.maa.tiffens.ui.fragments.LoginFragment
+import com.maa.tiffens.ui.fragments.MainFragment
+import com.maa.tiffens.ui.fragments.MobileNumberFragment
 import io.paperdb.Paper
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -42,6 +44,8 @@ class ActivityMain : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
             Paper.init(this)
+            BaseUIHelper.hideKeyboard(this)
+
             Handler().postDelayed(
                 Runnable // Using handler with postDelayed called runnable run method
 
@@ -49,7 +53,7 @@ class ActivityMain : AppCompatActivity() {
                     maatiffen_logo_icon.visibility = View.GONE
                     triggerMainProcess()
 
-                }, 2 * 2000
+                },  2000
             ) // wait for 5 s
             BaseHelper.triggerNotifLog(this);
 
@@ -126,7 +130,7 @@ class ActivityMain : AppCompatActivity() {
                 }
             }
 
-            if (getSupportFragmentManager().getBackStackEntryCount() <= 1 || (currentFragment is LoginFragment)) {
+            if (getSupportFragmentManager().getBackStackEntryCount() <= 1 || (currentFragment is MobileNumberFragment)) {
                 this@ActivityMain.finish()
             } else {
                 super.onBackPressed()
@@ -141,17 +145,18 @@ class ActivityMain : AppCompatActivity() {
 
         }
 
-        override fun onPause() {
-            super.onPause()
-
+        override fun onDestroy() {
+            super.onDestroy()
+            unregisterReceiver(mReceiver)
         }
+
 
         fun triggerMainProcess(){
 
             if(!BaseHelper.isEmpty(UserInfoManager.getInstance(this).authToken))
-                setFragment(HomeFragment())
+                setFragment(MainFragment())
             else
-                setFragment(LoginFragment())
+                setFragment(MobileNumberFragment())
         }
 
 
@@ -472,7 +477,7 @@ class ActivityMain : AppCompatActivity() {
 
         override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             super.onActivityResult(requestCode, resultCode, data)
-            LoginFragment().onActivityResult(requestCode, resultCode, data);
+            MobileNumberFragment().onActivityResult(requestCode, resultCode, data);
 
         }
         /******************************************

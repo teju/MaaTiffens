@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "applicationId": "pl.aprilapps.easyphotopicker",
+  "variantType": "LIBRARY",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": -1,
+        "outputFile": "easyimage_lib-debug.aar",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "../../library_manifest/debug/AndroidManifest.xml",
+      "properties": {
+        "packageId": "pl.aprilapps.easyphotopicker",
+        "split": ""
+      }
+    }
+  ]
+}

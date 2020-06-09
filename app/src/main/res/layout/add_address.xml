@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/header"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/locationAddress"
+                android:textColor="@color/Black"
+                android:layout_weight="4"
+                android:drawableLeft="@drawable/map_marker"
+                android:drawablePadding="10dp"
+                android:text="Fusionopolis Symbiosis, 3 Fusionopolis Way #13-25/24, Singapore 138633"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="10dp"
+                android:text="Change\nAddress"
+                android:id="@+id/change_address"
+                android:textColor="@color/themeColor"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="House/Flat/Block No"
+                android:layout_height="wrap_content">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Land Mark"
+                android:layout_height="wrap_content">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+        </LinearLayout>
+        <Button
+            android:layout_width="150dp"
+            android:text="Save"
+            android:id="@+id/save_address"
+            android:textColor="@color/White"
+            android:background="@drawable/rounded_corner_btn"
+            android:backgroundTint="@color/themeColor"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

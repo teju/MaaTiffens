@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="150dp"
+        android:layout_marginTop="25dp"
+        android:text="Skip"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/Black"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16dp"
+            android:text="Complete your registration by uploading your profile photo"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/account_circle"
+            android:layout_height="150dp">
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <Button
+            android:layout_width="150dp"
+            android:layout_marginTop="25dp"
+            android:text="Upload"
+            android:id="@+id/btnupload"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/White"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_corner_edittext"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+</RelativeLayout>

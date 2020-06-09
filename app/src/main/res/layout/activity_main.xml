@@ -3,23 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/White"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="@color/White"
         android:layout_height="match_parent">
 
         <FrameLayout
             android:id="@+id/layoutFragment"
+            android:background="@color/White"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:adjustViewBounds="true"
-            android:background="@color/soft_transparent_grey"
             android:id="@+id/maatiffen_logo_icon"
+            android:src="@drawable/logo"
             android:layout_centerInParent="true"
-            android:layout_height="match_parent">
+            android:layout_height="150dp">
 
         </ImageView>
     </RelativeLayout>

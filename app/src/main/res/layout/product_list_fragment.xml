@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/soft_transparent_grey"
+    android:layout_height="match_parent">
+    <include layout="@layout/header"
+        android:id="@+id/header"></include>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="50dp"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Green"
+        android:text="Order Now"
+        android:id="@+id/order_now"
+        android:textColor="@color/White"
+        android:layout_height="wrap_content">
+    </Button>
+</RelativeLayout>

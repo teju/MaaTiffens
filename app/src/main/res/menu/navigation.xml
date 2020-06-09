@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_homepage"
+        android:icon="@drawable/home"
+        android:titleCondensed="home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_pay"
+        android:icon="@drawable/history"
+        android:titleCondensed="history"
+        android:title="History" />
+
+    <item
+        android:checked="true"
+        android:id="@+id/navigation_deera"
+        android:icon="@drawable/cart"
+        android:titleCondensed="cart"
+        android:title="Cart" />
+
+    <item
+        android:checked="true"
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/account"
+        android:titleCondensed="profile"
+        android:title="Profile" />
+
+</menu>

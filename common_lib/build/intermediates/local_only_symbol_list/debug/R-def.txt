@@ -217,8 +217,8 @@ drawable list_focused_ssc
 drawable list_pressed_ssc
 drawable loading_animation
 drawable logo
-drawable rounded_corner_btn_border_disabled
-drawable rounded_corner_btn_border_enabled
+drawable rounded_corner_btn
+drawable rounded_corner_edittext
 drawable scrollbar_handle_holo_dark
 drawable scrollbar_handle_holo_light
 drawable selectable_background

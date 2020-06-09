@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/logo"
+            android:layout_height="50dp">
+        </ImageView>
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/bell"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_height="30dp">
+        </ImageView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Deliver To :"
+        android:textColor="@color/Black"
+        android:textSize="20dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/locationAddress"
+        android:drawableLeft="@drawable/map_marker"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+    </TextView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/maa_introduction"
+        android:layout_below="@+id/locationAddress"
+        android:layout_marginTop="20dp"
+        android:layout_height="150dp">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="100dp"
+                android:text="BreakFast"
+                android:id="@+id/break_fast"
+                android:layout_height="100dp">
+            </Button>
+            <Button
+                android:layout_width="100dp"
+                android:text="Lunch"
+                android:layout_marginLeft="15dp"
+                android:layout_height="100dp">
+            </Button>
+            <Button
+                android:layout_width="100dp"
+                android:layout_marginLeft="15dp"
+                android:text="Snacks"
+                android:layout_height="100dp">
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="100dp"
+                android:text="Dinner"
+                android:layout_height="100dp">
+            </Button>
+            <Button
+                android:layout_width="100dp"
+                android:text="Home Made Products"
+                android:layout_marginLeft="15dp"
+                android:layout_height="100dp">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
