@@ -47,6 +47,4 @@ class AddressListFragment : BaseFragment() ,View.OnClickListener {
             }
         }
     }
-
-
 }
