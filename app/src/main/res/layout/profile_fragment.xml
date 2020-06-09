@@ -46,7 +46,7 @@
             android:padding="20dp"
             android:background="@drawable/rounded_corner_btn"
             android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="wrap_content"
                 android:src="@drawable/grease_pencil"
@@ -115,60 +115,32 @@
                     android:layout_height="wrap_content">
                 </TextView>
             </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:background="@color/soft_transparent_grey"
-                android:layout_height="1dp">
-
-            </View>
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:id="@+id/manage_address"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="Manage Address"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/Goldenrod"
-                    android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_height="wrap_content">
                 </TextView>
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
-                    android:text="Add New"
-                    android:id="@+id/add_new"
-                    android:layout_marginTop="10dp"
+                    android:src="@drawable/chevron_right"
+                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:textColor="@color/themeColor"
                     android:layout_height="wrap_content">
-                </TextView>
-
+                </ImageView>
             </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:id="@+id/recyclerView"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="match_parent">
-                </androidx.recyclerview.widget.RecyclerView>
-                <Button
-                    android:layout_width="150dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/recyclerView"
-                    android:background="@drawable/rounded_corner_btn"
-                    android:backgroundTint="@color/themeColor"
-                    android:text="Add New"
-                    android:textColor="@color/White"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content">
 
-                </Button>
 
-            </RelativeLayout>
         </LinearLayout>
 
     </LinearLayout>

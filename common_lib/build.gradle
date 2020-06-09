@@ -48,6 +48,7 @@ android {
 
 dependencies {
     compile 'io.paperdb:paperdb:2.7.1'
+    compile 'com.android.support:design:22.2.0'
 
     api "androidx.appcompat:appcompat:$project.ext.androidxversion"
 

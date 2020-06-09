@@ -83,23 +83,29 @@
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/Green"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:text="Total"
                 android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/White"
+                android:textColor="@color/ForestGreen"
                 android:layout_height="wrap_content">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:text="Rs 200"
-                android:textColor="@color/White"
+                android:textColor="@color/ForestGreen"
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content">
             </TextView>
         </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:background="@color/themeGold"
+            android:text="Proceed"
+            android:textColor="@color/White"
+            android:layout_height="wrap_content">
+        </Button>
     </LinearLayout>
 
 </RelativeLayout>

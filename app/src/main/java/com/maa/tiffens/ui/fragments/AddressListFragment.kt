@@ -1,5 +1,6 @@
 package com.maa.tiffens.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,22 +8,24 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.maa.tiffens.R
-import com.maa.tiffens.ui.adapter.HistoryAdapter
+import com.maa.tiffens.SearchActivity
+import com.maa.tiffens.etc.GPSTracker
+import com.maa.tiffens.etc.Helper
+import com.maa.tiffens.ui.adapter.AddressAdapter
 import com.maa.tiffens.ui.adapter.ProductsAdapter
-import com.maa.tiffens.ui.fragments.BaseFragment
+import com.maatiffens.libs.helpers.BaseHelper
+import kotlinx.android.synthetic.main.addresslist_fragment.*
 import kotlinx.android.synthetic.main.header.*
-import kotlinx.android.synthetic.main.product_list_fragment.*
 
 
-class ProductListFragment : BaseFragment() ,View.OnClickListener {
+class AddressListFragment : BaseFragment() ,View.OnClickListener {
 
+    private val REQUEST_CODE_AUTOCOMPLETE = 2
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        v = inflater.inflate(R.layout.product_list_fragment, container, false)
+        v = inflater.inflate(R.layout.addresslist_fragment, container, false)
         return v
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,16 +33,17 @@ class ProductListFragment : BaseFragment() ,View.OnClickListener {
     }
 
     private fun initUI() {
-        filter.visibility = View.VISIBLE
-        order_now.setOnClickListener(this)
+        title.setText("Addresses")
+        floating_action_button.setOnClickListener(this)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        recyclerView.adapter = ProductsAdapter(activity!!)
+        recyclerView.adapter = AddressAdapter(activity!!)
+
     }
 
     override fun onClick(v: View?) {
         when(v?.id) {
-            R.id.order_now -> {
-                home().setFragment(CartFragment())
+            R.id.floating_action_button -> {
+                home().setFragment(AddAddressFragment())
             }
         }
     }

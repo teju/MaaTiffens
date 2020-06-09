@@ -34,9 +34,8 @@ class ProfileFragment : BaseFragment() ,View.OnClickListener {
     private fun initUI() {
         edit_ptofile_pic.setOnClickListener(this)
         edit_details.setOnClickListener(this)
-        add_new.setOnClickListener(this)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
-        recyclerView.adapter = AddressAdapter(activity!!)
+        manage_address.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
@@ -44,8 +43,8 @@ class ProfileFragment : BaseFragment() ,View.OnClickListener {
             R.id.edit_ptofile_pic -> {
                 home().setFragment(ProfilePicUploadFragment())
             }
-            R.id.add_new -> {
-                home().setFragment(AddAddressFragment())
+            R.id.manage_address -> {
+                home().setFragment(AddressListFragment())
             }
             R.id.edit_details -> {
                 home().setFragment(RegisterFragment().apply {
