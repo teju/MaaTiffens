@@ -3,20 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:layout_width="150dp"
-        android:layout_marginTop="25dp"
-        android:text="Skip"
-        android:layout_alignParentRight="true"
-        android:textAllCaps="true"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/Black"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent"
-        android:layout_height="wrap_content">
-
-    </Button>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
@@ -52,6 +38,20 @@
             android:textColor="@color/White"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_corner_edittext"
+            android:layout_height="wrap_content">
+
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Skip"
+            android:id="@+id/skip"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/Black"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
             android:layout_height="wrap_content">
 
         </Button>

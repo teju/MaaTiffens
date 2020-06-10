@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:layout_marginRight="20dp"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -21,7 +21,7 @@
                 android:textColor="@color/Black"
                 android:layout_weight="4"
                 android:drawableLeft="@drawable/map_marker"
-                android:drawablePadding="10dp"
+                android:drawablePadding="4dp"
                 android:text="Fusionopolis Symbiosis, 3 Fusionopolis Way #13-25/24, Singapore 138633"
                 android:layout_height="wrap_content">
             </TextView>

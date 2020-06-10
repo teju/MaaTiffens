@@ -55,7 +55,7 @@ class ActivityMain : AppCompatActivity() {
 
                 },  2000
             ) // wait for 5 s
-            BaseHelper.triggerNotifLog(this);
+           // BaseHelper.triggerNotifLog(this);
 
             val mContext = this.getBaseContext();
 

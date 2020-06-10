@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:id="@+id/llBack"
             android:src="@drawable/chevron_left"
             android:layout_centerVertical="true"
@@ -22,7 +22,7 @@
             android:textColor="@color/White"
             android:textSize="20dp"
             android:id="@+id/title"
-            android:fontFamily="@font/playfairdisplay"
+            android:fontFamily="@font/playfairdisplay_black"
             android:gravity="center_vertical"
             android:layout_centerHorizontal="true"
             android:layout_height="match_parent">

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.maa.tiffens.R
+import kotlinx.android.synthetic.main.header.*
 import kotlinx.android.synthetic.main.register_fragment.*
 
 
@@ -28,7 +29,9 @@ class RegisterFragment : BaseFragment() ,View.OnClickListener {
         submit.setOnClickListener(this)
         address.setOnClickListener(this)
         if(isEdit) {
+            title.setText("Edit")
             address.visibility= View.GONE
+            header.visibility= View.VISIBLE
             heading.visibility= View.GONE
             logo.visibility= View.GONE
             pgone_number.visibility= View.VISIBLE

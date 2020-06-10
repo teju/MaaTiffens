@@ -16,15 +16,18 @@
             android:background="@color/White"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-        <ImageView
-            android:layout_width="150dp"
-            android:adjustViewBounds="true"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:id="@+id/maatiffen_logo_icon"
-            android:src="@drawable/logo"
-            android:layout_centerInParent="true"
-            android:layout_height="150dp">
-
-        </ImageView>
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="200dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo"
+                android:layout_centerInParent="true"
+                android:layout_height="200dp">
+            </ImageView>
+        </RelativeLayout>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
