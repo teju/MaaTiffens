@@ -19,13 +19,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:id="@+id/maatiffen_logo_icon"
+            android:background="@drawable/splash_image"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="230dp"
                 android:adjustViewBounds="true"
                 android:src="@drawable/logo"
                 android:layout_centerInParent="true"
-                android:layout_height="200dp">
+                android:layout_height="230dp">
             </ImageView>
         </RelativeLayout>
     </RelativeLayout>
